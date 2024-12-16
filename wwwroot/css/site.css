@@ -1,0 +1,226 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 12px; /* Reduce base font size for smaller screens */
+    }
+
+    .table {
+        font-size: 0.85rem; /* Adjust table font size */
+    }
+
+    .btn {
+        padding: 8px 16px; /* Adjust button padding */
+        font-size: 0.8rem; /* Reduce button font size */
+    }
+
+    .logo-image1 {
+        max-height: 6vw;
+        max-width: 100%;
+    }
+
+    .card {
+        width: 100%; /* Make cards span the full width of the screen */
+        margin: 10px 0; /* Reduce margin between cards */
+    }
+
+    .card-content h3 {
+        font-size: 20px; /* Adjust card title font size */
+    }
+
+    .notif-icon {
+        height: 16px; /* Smaller notification icon size */
+        width: 16px;
+    }
+
+    ._container h1 {
+        font-size: 5vw; /* Scale the title for small screens */
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logo-image1 {
+    max-height: 3vw;
+    max-width: 100%;
+}
+/*custom*/
+._container {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+._content {
+    text-align: center;
+    color: white;
+}
+
+._container h1 {
+    margin-top: -25%;
+    color: white;
+    font-size: 3.5vw;
+}
+
+.background-clip {
+    min-width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.card {
+    width: 325px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    margin: 20px;
+}
+
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+        font-size: 28px;
+        margin-bottom: 8px;
+}
+
+.notif-icon{
+    height: 20px;
+    width: 20px;
+}
+
+
+.qrcodes img{
+    max-width: 20%; /* Set the width to a smaller size */
+    max-height: 20%; /* Set the height to match the width */
+    
+}
+
+.logo-pic1{
+    width: 40vw;
+    height:40vw;
+}
+
+
+
+/*new update for responsive species*/
+.uniform-img {
+    width: 510px; /* Increased width */
+    height: 400px; /* Increased height */
+    object-fit: cover; /* Maintains aspect ratio within the set size */
+    margin: auto; /* Centers images horizontally */
+}
+
+.video-wrapper {
+    max-width: 600px; /* Set the maximum width for the video */
+    margin: 0 auto; /* Center the video horizontally */
+}
+
+.responsive-video {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+    .responsive-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+/* Styles for very small screens */
+@media (max-width: 768px) {
+    .title-large {
+        font-size: 2.5rem;
+    }
+
+    .title-small {
+        font-size: 1.25rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-large {
+        font-size: 2rem;
+    }
+
+    .title-small {
+        font-size: 1rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .title-large {
+        font-size: 1.5rem;
+    }
+
+    .title-small {
+        font-size: 0.8rem;
+    }
+
+    .description {
+        font-size: 0.75rem;
+    }

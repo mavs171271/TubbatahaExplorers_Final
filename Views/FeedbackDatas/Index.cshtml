@@ -1,0 +1,36 @@
+﻿@model IEnumerable<VisualStudio.Models.FeedbackData>
+
+@{
+    ViewData["Title"] = "Thank You for Your Feedback!";
+}
+
+<section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+            <!-- Success Message -->
+            <h1 class="text-success fw-bold">Thank You for Your Feedback!</h1>
+            <p class="mt-4 fs-5">
+                Thank you for taking the time to share your thoughts with us! Your feedback is incredibly valuable and helps us improve the <strong>Tubbataha Explorer</strong> web app to better serve you and our community.
+            </p>
+
+            <!-- Highlight Features -->
+            <h3 class="mt-4">Here’s how your feedback makes a difference:</h3>
+            <ul class="list-group list-group-flush text-start mx-auto mt-3" style="max-width: 600px;">
+                <li class="list-group-item fs-5">💡 Drives continuous improvements to enhance your experience.</li>
+                <li class="list-group-item fs-5">📈 Helps us prioritize features and updates based on your needs.</li>
+                <li class="list-group-item fs-5">🤝 Strengthens our community by valuing your voice and contributions.</li>
+            </ul>
+
+            <!-- Closing Paragraph -->
+            <p class="mt-4 fs-5">
+                We truly appreciate your support in making the app even better. Stay tuned for more updates and enhancements based on your suggestions. Safe travels, and we look forward to your next adventure!
+            </p>
+
+            <a class=" nav-link btn btn-primary mt-3 px-4 py-2" style="font-size: 1.2rem;" asp-controller="Home" asp-action="Index">Back to Home 🏠</a>
+        </div>
+    </div>
+</section>
+
+
+
+

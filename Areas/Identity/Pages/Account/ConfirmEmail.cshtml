@@ -1,0 +1,35 @@
+﻿@page
+@model ConfirmEmailModel
+@{
+    ViewData["Title"] = "Confirm email";
+}
+
+
+<section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12 text-center">
+            <!-- Success Message -->
+            <h1 class="text-success fw-bold">Thank You for Verifying Your Email!</h1>
+            <p class="mt-4 fs-5">
+                We’re thrilled to welcome you to the <strong>Tubbataha Explorer</strong> community! By verifying your email, you’ve taken the first step in joining us on an exciting journey to explore, learn about, and protect one of the world’s most spectacular marine ecosystems.
+            </p>
+
+            <!-- Highlight Features -->
+            <h3 class="mt-4">With your account now active, you can:</h3>
+            <ul class="list-group list-group-flush text-start mx-auto mt-3" style="max-width: 600px;">
+                <li class="list-group-item fs-5">🌊 Dive into a treasure trove of marine biodiversity information.</li>
+                <li class="list-group-item fs-5">🤝 Contribute your knowledge and discoveries to our platform.</li>
+                <li class="list-group-item fs-5">🌍 Help raise awareness about conservation efforts that preserve the beauty of Tubbataha Reef.</li>
+            </ul>
+
+            <!-- Closing Paragraph -->
+            <p class="mt-4 fs-5">
+                Thank you for being part of our mission to inspire and educate others about marine conservation. Together, we can make a difference!
+            </p>
+
+            <a class="btn btn-primary mt-3 px-4 py-2" style="font-size: 1.2rem;" asp-page="/Account/Login" asp-area="Identity">Let’s Get Started! 🌊</a>
+        </div>
+    </div>
+</section>
+
+

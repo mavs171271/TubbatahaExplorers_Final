@@ -1,0 +1,60 @@
+﻿@model List<VisualStudio.Models.Content>;
+@{
+    ViewData["Title"] = "Species Page";
+}
+
+<h2 class="text-center mt-3">Marine Species</h2>
+
+<p class="text-center px-3">
+    On this section, users can select what marine species there are in Tubbataha Reef. Marine biodiversity allows nature in our ocean to be productive, resilient, and adaptable to environmental changes. Marine biodiversity can prevent one species’ extinction from causing wider negative impacts on a marine ecosystem. Each species in the ocean has a particular role to play, whether that is marine worms converting organic material into carbon dioxide for marine plants to photosynthesize or sharks controlling prey populations. Some species play similar roles in an ecosystem, so if one species becomes extinct, another will be able to carry out the same function or ‘service’.
+</p>
+
+<style>
+    .card:hover {
+        box-shadow: -1px 9px 40px #0000FF;
+    }
+
+    .form-inline {
+        display: flex;
+        justify-content: flex-start;
+    }
+</style>
+
+
+<div class="container mt-4">
+    <div class="d-flex flex-wrap justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="card" style="width:20em; margin:10px;">
+                <img src="@item.img" class="card-img-top" alt="@item.title" />
+                <div class="card-body">
+                    <div class="card-title">
+                        <h2>@item.title</h2>
+                    </div>
+                    <div class="card-text">
+                        <p>@item.text</p>
+                    </div>
+                    <a href="@item.link" class="btn btn-primary">Read More...</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script type="text/javascript">
+    $('.card').hover(
+        function () {
+            $(this).animate({
+                marginTop: "-=1%",
+                marginBottom: "+=1%"
+            }, 200)
+        },
+        function () {
+            $(this).animate({
+                marginTop: "+=1%",
+                marginBottom: "-=1%"
+            })
+        }
+    )
+</script>

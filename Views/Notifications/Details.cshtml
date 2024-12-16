@@ -1,0 +1,30 @@
+﻿@model VisualStudio.Models.Notification
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Notification</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.message)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.message)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nid)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nid)
+        </dd>
+    </dl>
+</div>
+<div>
+ |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,61 @@
+﻿@model VisualStudio.Models.FeedbackData
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="text-center">Feedback</h1>
+
+<h4 class="text-center">Tell us what you need satisfy your needs!</h4>
+<hr />
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                <!-- Types Dropdown -->
+                <div class="form-group mb-4">
+                    <label asp-for="Types" class="form-label">Select Feedback Type</label>
+                    <select asp-for="Types" class="form-control">
+                        <option value="">Select a Type</option>
+                        <option value="User Experience">User Experience</option>
+                        <option value="User Satisfaction">User Satisfaction</option>
+                        <option value="Error/Bug">Error/Bug</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span asp-validation-for="Types" class="text-danger"></span>
+                </div>
+
+                <!-- Body Textarea -->
+                <div class="form-group mb-4">
+                    <label asp-for="Body" class="form-label">Feedback Details</label>
+                    <textarea asp-for="Body" class="form-control body-textarea" placeholder="Provide your feedback in detail..."></textarea>
+                    <span asp-validation-for="Body" class="text-danger"></span>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-primary w-50">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a asp-action="Index" asp-controller="Home" class="btn btn-secondary">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<style>
+    .body-textarea {
+        height: 250px; /* Larger textarea */
+        resize: vertical; /* Allow resizing vertically */
+    }
+</style>

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<VisualStudio.Models.Notification>
+
+@{
+    ViewData["Title"] = "Notifications";
+}
+
+<h1 class="text-center">Notifications</h1>
+
+<!-- Add Bootstrap classes for centering the table -->
+<div class="container">
+    <table class="table table-bordered table-striped mx-auto" style="width: 80%;">
+        <thead>
+            <tr>
+                <th>
+                    Messages
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.message)
+                    </td>
+
+                    <td>
+                        |
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="text-white btn btn-danger" onclick="return confirmDelete()">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Add JavaScript for delete confirmation -->
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this notification?");
+    }
+</script>
+
